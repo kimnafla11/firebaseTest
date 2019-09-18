@@ -5,49 +5,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-파이어베이스 미친새끼야 존나 어렵네 씨발
-
-
-
+	<!--firebase 필수 요소-->
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+	<!--firebase api키 및 정보 js-->
+<script type = "text/javascript" src = "app.js"></script>
+	<!--Google Login정보 js-->
+<script type = "text/javascript" src = "googleLogin.js"></script> 
+	<!--firebase database js-->
+<script type = "text/javascript" src = "database.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDKdyj4qG0UqbG1QBc101C54ORTvMqJPLA",
-    authDomain: "webtermproj-5dec2.firebaseapp.com",
-    databaseURL: "https://webtermproj-5dec2.firebaseio.com",
-    projectId: "webtermproj-5dec2",
-    storageBucket: "webtermproj-5dec2.appspot.com",
-    messagingSenderId: "613537312259",
-    appId: "1:613537312259:web:d6c8df52313d61db2ae836"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-// 구글로그인
-var provider = new firebase.auth.GoogleAuthProvider();
-// 로그인 처리
-firebase.auth().signInWithPopup(provider).then(function(result) {
-	// This gives you a Google Access Token. You can use it to access the Google API.
-	var token = result.credential.accessToken;
-	// The signed-in user info.
-	var user = result.user;
-	
-	console.log(user) //로그인 후 콘솔로 정보확인
-}).catch(function(error) {
-	// Handle Errors here.
-	var errorCode = error.code;
-	var errorMessage = error.message;
-	// The email of the user's account used.
-	var email = error.email;
-	// The firebase.auth.AuthCredential type that was used.
-	var credential = error.credential;
-	// ...
-});
-
-</script>
+<!---------------------HTML 영역--------------------->
+파이어베이스 미친새끼
 </body>
 </html>
